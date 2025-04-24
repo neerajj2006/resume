@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Screen Resume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Screen Resume with AI</h1>
+  <form id="screenForm">
+    <div id="uploadBox">Upload your resume</div><br />
+
+    <button class="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition" id="button"type="submit">Screen</button>
+  </form>
+  <div id="feedback"></div>
+
+  <script>
+    document.getElementById("screenForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const resumeText = e.target.resume.value;
+      const response = await fetch("/api/screen-resume", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ resume: resumeText })
+      });
+      const result = await response.json();
+      document.getElementById("feedback").innerText = result.feedback || result.error;
+    });
+  </script>
+</body>
+</html>

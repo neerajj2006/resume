@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REMU-AI Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="REMU-AI Logo">
+      
+    </div>
+    <h1>remu-AI</h1>
+    <h2>Resume Builder & Screener</h2>
+    <p>Helping job seekers craft tailored resumes and recruiters identify potential candidates.</p>
+    <a href="get-started.html">
+  <button class="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition" id="button">
+    Get Started
+  </button>
+</a>
+
+  </header>
+
+  <section class="cards">
+    <div class="card" onclick="location.href='resume-builder.html'">
+
+      <div class="icon"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+  <polyline points="14 2 14 8 20 8"/>
+  <line x1="16" y1="13" x2="8" y2="13"/>
+  <line x1="16" y1="17" x2="8" y2="17"/>
+  <line x1="10" y1="9" x2="9" y2="9"/>
+</svg>
+</div>
+      <h3>Build Resume</h3>
+      <p>Create job-specific resumes with AI assistance</p>
+    </div>
+    <div class="card" onclick="location.href='resume-screener.html'">
+
+      <div class="icon"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M9 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"/>
+  <polyline points="9 2 9 8 15 8"/>
+  <line x1="9" y1="13" x2="15" y2="13"/>
+  <line x1="9" y1="17" x2="13" y2="17"/>
+  <circle cx="18" cy="6" r="3"/>
+  <line x1="20" y1="8" x2="22" y2="10"/>
+</svg>
+</div>
+      <h3>Screen Resume</h3>
+      <p>Analyze resumes and get feedback using AI</p>
+    </div>
+  </section>
+
+<footer>
+  <nav>
+    <!--Tab to edit-->
+  
+    <a href="#" onclick="handleFooterClick('home')" style="color: #F9FBF2; margin: <10></10>px;">Home</a>
+    <a href="#" onclick="handleFooterClick('about')" style="color: #F9FBF2; margin: 10px;">About Us</a>
+    <a href="#" onclick="handleFooterClick('how')" style="color: #F9FBF2; margin: 10px;">How to Use</a>
+    <a href="#" onclick="handleFooterClick('feedback')" style="color: #F9FBF2; margin: 10px;">Feedback</a>
+    <a href="#" onclick="handleFooterClick('partnerships')" style="color: #F9FBF2; margin: 10px;">Partnerships</a>
+    <a href="#" onclick="handleFooterClick('contact')" style="color: #F9FBF2; margin: 10px;">Contact Us</a>
+    <a href="#" onclick="handleFooterClick('privacy')" style="color: #F9FBF2; margin: 10px;">Privacy Policy</a>
+    <a href="#" onclick="handleFooterClick('faqs')" style="color: #F9FBF2; margin: 10px;">FAQs</a>
+  </nav>
+  <p style="margin-top: 20px;">© 2025 REMU-AI. All rights reserved.</p>
+</footer>
+
+<div id="footer-content" style="padding: 20px; text-align: center; font-size: 1rem;"></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

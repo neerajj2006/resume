@@ -1,0 +1,244 @@
+/* Reset and base styles */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Body styles */
+  body {
+    background-color: #F9FBF2; /* Ivory */
+    color: #0E1C36; /* Oxford Blue */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Header styles */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header div {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background-image: url("/remu-logo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+  }
+  
+  /* Typography */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #0E1C36; /* Oxford Blue */
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: #444;
+  }
+  
+  p {
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  /* Buttons */
+  #button {
+    background-color: #AFCBFF; /* Jordy Blue */
+    color: #0E1C36; /* Oxford Blue */
+    border: none;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  #button:hover {
+    background-color: #D7F9FF; /* Light Cyan */
+  }
+  
+  /* Card Section */
+  .cards {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #FFEDE1; /* Linen */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
+  
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    background-color: #D7F9FF; /* Light Cyan */
+  }
+  
+  .card .icon {
+    margin-bottom: 1rem;
+  }
+  
+  .card svg {
+    stroke: #AFCBFF; /* Jordy Blue */
+  }
+  
+  /* Card Text */
+  .card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #0E1C36; /* Oxford Blue */
+  }
+  
+  .card p {
+    color: #333;
+  }
+  
+  /* Footer */
+   footer {
+     margin-top: 50px;
+    background-color: #0E1C36;
+    color: #F9FBF2;
+    /* display: flex; */
+    /* flex-direction: row;
+    justify-content: center;
+    align-items: center;   */
+    width: 100vw;
+    
+    padding: 40px;
+    
+  } 
+  footer a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  /* Form styles */
+  form {
+    background-color: white;
+    color: #333;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: left;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    border-color: #3478f6;
+    outline: none;
+  }
+  
+  /* Output box */
+  #output {
+    margin-top: 30px;
+    background-color: #f0f6ff;
+    color: #111;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    white-space: pre-line;
+  }
+  
+  /* Upload Box */
+  #uploadBox {
+    border: 2px dashed #0052cc;
+    padding: 40px;
+    text-align: center;
+    color: #0052cc;
+    background-color: #f0f6ff;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  #uploadBox:hover {
+    background-color: #e0edff;
+    border-color: #003e99;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    
+    #gen-res,
+    #gen-scr {
+      width: 100%;
+      border: none;
+      color: #0E1C36;
+      font-weight: bold;
+      background-color: #AFCBFF;
+      border-radius: 9999px;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      /* transition: background-color 0.3s ease; */
+    }
+  }
+  
+  /* 
+  .gen-res,
+  .gen-scr:hover {
+    background-color: #D7F9FF; 
+    } */
+  
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  #resumeForm,#screenForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFEDE1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
+  }

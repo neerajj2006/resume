@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Build Resume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Build Resume with AI</h1>
+  <form id="resumeForm">
+    <input type="text" name="name" placeholder="Your Name" required /><br />
+    <input type="text" name="job" placeholder="Job Role" required /><br />
+    <textarea name="experience" placeholder="Your Experience"></textarea><br />
+    <button class="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition" id="button"type="submit">Generate Resume</button>
+  </form>
+  <div id="output"></div>
+
+  <script>
+    document.getElementById("resumeForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        job: form.job.value,
+        experience: form.experience.value
+      };
+      const response = await fetch("/api/build-resume", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      const result = await response.json();
+      document.getElementById("output").innerText = result.resume || result.error;
+    });
+  </script>
+</body>
+</html>
